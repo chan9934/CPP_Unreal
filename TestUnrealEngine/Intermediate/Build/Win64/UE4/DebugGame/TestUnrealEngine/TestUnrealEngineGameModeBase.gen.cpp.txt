@@ -1,9 +1,0 @@
-C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4\DebugGame\TestUnrealEngine\Definitions.TestUnrealEngine.h
-D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine/TestUnrealEngineGameModeBase.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\ServerStatReplicator.generated.h
-D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\GameModeBase.generated.h
-C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4\Inc\TestUnrealEngine\TestUnrealEngineGameModeBase.generated.h
