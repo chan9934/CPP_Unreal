@@ -1,0 +1,3 @@
+C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4\DebugGame\TestUnrealEngine\Definitions.TestUnrealEngine.h
+C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\MyActor.h
+C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4\Inc\TestUnrealEngine\MyActor.generated.h

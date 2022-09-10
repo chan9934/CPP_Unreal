@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TestUnrealEngine.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{88B48887-AECD-4B2E-9D57-CB6EA09E08A1}</UniqueIdentifier>
+      <UniqueIdentifier>{344B0112-D6F7-466A-96A7-937C2CEA1BFB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestUnrealEngine.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DF3CA789-791B-4C19-90C7-4511DB2ED63C}</UniqueIdentifier>
+      <UniqueIdentifier>{ACE61B80-E406-4A33-8A50-FA314B94FFD8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,26 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TestUnrealEngine">
-      <UniqueIdentifier>{DF10B247-8A84-4015-BF66-899064B124EA}</UniqueIdentifier>
+      <UniqueIdentifier>{E7ED5D6B-6C1C-4E2E-BE1F-442CF88AE6EF}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyActor.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyActor.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyGameModeBase.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyGameModeBase.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyPawn.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyPawn.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
     <None Include="..\..\Source\TestUnrealEngine\TestUnrealEngine.Build.cs">
       <Filter>Source\TestUnrealEngine</Filter>
     </None>
