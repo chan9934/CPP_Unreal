@@ -2,14 +2,39 @@
 
 
 #include "MyAnimInstance.h"
-
+#include "GameFramework/Character.h"
+#include "GameFramework/PawnMovementComponent.h"
+UMyAnimInstance::UMyAnimInstance()
+{
+	static ConstructorHelpers::FObjectFinder<UAnimMontage>AM(TEXT("AnimMontage'/Game/Animations/NewAnimMontage.NewAnimMontage'"));
+	if (AM.Succeeded())
+	{
+		AttackMontage = AM.Object;
+	}
+}
 void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
 	Super::NativeUpdateAnimation(DeltaSeconds);
 
-	auto pawn = TryGetPawnOwner();
-	if (IsValid(pawn))
+	auto Pawn = TryGetPawnOwner();
+	if (IsValid(Pawn))
 	{
-		Speed = pawn->GetVelocity().Size();
+		Speed = Pawn->GetVelocity().Size();
+
+		auto Character = Cast<ACharacter>(Pawn);
+
+		if(IsValid(Character))
+		{
+			IsFalling = Character->GetMovementComponent()->IsFalling();
+		}
+	}
+
+}
+
+void UMyAnimInstance::PlayAttackMontage()
+{
+	if (!Montage_IsPlaying(AttackMontage))
+	{
+		Montage_Play(AttackMontage, 1.f);
 	}
 }

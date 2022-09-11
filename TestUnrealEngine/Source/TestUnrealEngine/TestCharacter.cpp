@@ -5,6 +5,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "TestAnimInstance.h"
 
 // Sets default values
 ATestCharacter::ATestCharacter()
@@ -51,6 +52,9 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ATestCharacter::Jump);
+	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &ATestCharacter::Attack);
+
 	PlayerInputComponent->BindAxis(TEXT("UpDown"), this, &ATestCharacter::UpDown);
 	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &ATestCharacter::LeftRight);
 	PlayerInputComponent->BindAxis(TEXT("Yaw"), this, &ATestCharacter::Yaw);
@@ -82,5 +86,14 @@ void ATestCharacter::Yaw(float Value)
 		return;
 	}
 	AddControllerYawInput(Value);
+}
+
+void ATestCharacter::Attack()
+{
+	auto AnimInstance = Cast<UTestAnimInstance>(GetMesh()->GetAnimInstance());
+	if (AnimInstance)
+	{
+		AnimInstance->PlayMontage();
+	}
 }
 
