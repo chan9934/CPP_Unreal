@@ -14,10 +14,9 @@ UTestAnimInstance::UTestAnimInstance()
 }
 void UTestAnimInstance::PlayMontage()
 {
-	if (!(Montage_IsPlaying(AnimMontage)))
-	{
-		Montage_Play(AnimMontage, 1.f);
-	}
+	
+	Montage_Play(AnimMontage, 1.f);
+
 }
 void UTestAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
@@ -34,4 +33,21 @@ void UTestAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 			IsFalling = Character->GetMovementComponent()->IsFalling();
 		}
 	}
+}
+
+void UTestAnimInstance::AnimNotify_AttackHit()
+{
+	UE_LOG(LogTemp, Log, TEXT("AnimNotify_AttackHit"));
+}
+
+FName UTestAnimInstance::GetAttackMontageName(int32 SectionIndex)
+{
+	return FName(*FString::Printf(TEXT("Attack%d"), SectionIndex));
+}
+
+void UTestAnimInstance::JumpToSection(int32 SectionIndex)
+{
+	FName name = GetAttackMontageName(SectionIndex);
+	Montage_JumpToSection(name, AnimMontage);
+	UE_LOG(LogTemp, Log, TEXT("AnimNotify%d"), SectionIndex);
 }

@@ -8,14 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAnimMontage;
 #ifdef TESTUNREALENGINE_TestCharacter_generated_h
 #error "TestCharacter.generated.h already included, missing '#pragma once' in TestCharacter.h"
 #endif
 #define TESTUNREALENGINE_TestCharacter_generated_h
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_SPARSE_DATA
-#define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_RPC_WRAPPERS
-#define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded);
+
+
+#define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded);
+
+
 #define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATestCharacter(); \
@@ -60,7 +69,8 @@ public: \
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ATestCharacter, SpringArm); } \
-	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ATestCharacter, Camera); }
+	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ATestCharacter, Camera); } \
+	FORCEINLINE static uint32 __PPO__AttackIndex() { return STRUCT_OFFSET(ATestCharacter, AttackIndex); }
 
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestCharacter_h_9_PROLOG

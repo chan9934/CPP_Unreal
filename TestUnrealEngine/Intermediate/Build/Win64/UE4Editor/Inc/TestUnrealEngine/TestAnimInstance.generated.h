@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TESTUNREALENGINE_TestAnimInstance_generated_h
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestAnimInstance_h_15_SPARSE_DATA
-#define TestUnrealEngine_Source_TestUnrealEngine_TestAnimInstance_h_15_RPC_WRAPPERS
-#define TestUnrealEngine_Source_TestUnrealEngine_TestAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define TestUnrealEngine_Source_TestUnrealEngine_TestAnimInstance_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAnimNotify_AttackHit);
+
+
+#define TestUnrealEngine_Source_TestUnrealEngine_TestAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAnimNotify_AttackHit);
+
+
 #define TestUnrealEngine_Source_TestUnrealEngine_TestAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUTestAnimInstance(); \

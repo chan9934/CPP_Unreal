@@ -39,5 +39,17 @@ public:
 	void Yaw(float Value);
 	void Attack();
 
+	UPROPERTY(VisibleAnywhere, Category = Pawn)
+	bool IsAttacking = false;
+
+	UPROPERTY()
+	class UTestAnimInstance* AnimInstance;
+
+	UFUNCTION()
+	void OnAttackMontageEnded(UAnimMontage* AnimMontage, bool bInterrupted);
+
+private:
+	UPROPERTY()
+	int32 AttackIndex = 0;
 
 };

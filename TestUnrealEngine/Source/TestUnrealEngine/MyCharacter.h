@@ -20,7 +20,7 @@ protected:
 	virtual void BeginPlay() override;
 
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -32,10 +32,30 @@ public:
 	void Yaw(float Value);
 	void Attack();
 
+	UFUNCTION()
+		void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
+
 private:
 	UPROPERTY(VisibleAnywhere)
-	class USpringArmComponent* SpringArm;
+		class USpringArmComponent* SpringArm;
 
 	UPROPERTY(VisibleAnywhere)
-	class UCameraComponent* Camera;
+		class UCameraComponent* Camera;
+
+	UPROPERTY(VisibleAnywhere, Category = Pawn)
+		bool IsAttacking = false;
+
+	UPROPERTY()
+		class UMyAnimInstance* AnimInstance;
+
+	UPROPERTY()
+		int32 AttackIndex = 0;
+	
+public:
+
+	UPROPERTY()
+		float UpDownValue = 0.f;
+
+	UPROPERTY()
+		float LeftRightValue = 0.f;
 };

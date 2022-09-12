@@ -37,6 +37,9 @@ ATestCharacter::ATestCharacter()
 void ATestCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	AnimInstance = Cast<UTestAnimInstance>(GetMesh()->GetAnimInstance());
+	AnimInstance->OnMontageEnded.AddDynamic(this, &ATestCharacter::OnAttackMontageEnded);
 	
 }
 
@@ -90,10 +93,21 @@ void ATestCharacter::Yaw(float Value)
 
 void ATestCharacter::Attack()
 {
-	auto AnimInstance = Cast<UTestAnimInstance>(GetMesh()->GetAnimInstance());
-	if (AnimInstance)
+	if (IsAttacking)
 	{
-		AnimInstance->PlayMontage();
+		return;
 	}
+	AnimInstance->PlayMontage();
+	AttackIndex = (AttackIndex + 1) % 3;
+	AnimInstance->JumpToSection(AttackIndex);
+	
+	IsAttacking = true;
+	
 }
+
+void ATestCharacter::OnAttackMontageEnded(UAnimMontage* AnimMontage, bool bInterrupted)
+{
+	IsAttacking = false;
+}
+
 

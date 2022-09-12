@@ -31,5 +31,13 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 		UAnimMontage* AnimMontage;
 
+private:
+	UFUNCTION()
+	void AnimNotify_AttackHit();
+
+public:
+	FName GetAttackMontageName(int32 SectionIndex);
+	void JumpToSection(int32 SectionIndex);
+
 	
 };

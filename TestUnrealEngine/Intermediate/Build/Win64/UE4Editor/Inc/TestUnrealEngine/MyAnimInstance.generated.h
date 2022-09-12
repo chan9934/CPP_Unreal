@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TESTUNREALENGINE_MyAnimInstance_generated_h
 
 #define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_SPARSE_DATA
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAnimNotify_AttackHit);
+
+
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAnimNotify_AttackHit);
+
+
 #define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyAnimInstance(); \
@@ -61,7 +69,9 @@ public: \
 #define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UMyAnimInstance, Speed); } \
 	FORCEINLINE static uint32 __PPO__IsFalling() { return STRUCT_OFFSET(UMyAnimInstance, IsFalling); } \
-	FORCEINLINE static uint32 __PPO__AttackMontage() { return STRUCT_OFFSET(UMyAnimInstance, AttackMontage); }
+	FORCEINLINE static uint32 __PPO__AttackMontage() { return STRUCT_OFFSET(UMyAnimInstance, AttackMontage); } \
+	FORCEINLINE static uint32 __PPO__Horizontal() { return STRUCT_OFFSET(UMyAnimInstance, Horizontal); } \
+	FORCEINLINE static uint32 __PPO__Vertical() { return STRUCT_OFFSET(UMyAnimInstance, Vertical); }
 
 
 #define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_12_PROLOG
