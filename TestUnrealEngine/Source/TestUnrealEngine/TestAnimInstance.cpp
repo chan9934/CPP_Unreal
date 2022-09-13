@@ -4,6 +4,7 @@
 #include "TestAnimInstance.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/PawnMovementComponent.h"
+#include "TestCharacter.h"
 UTestAnimInstance::UTestAnimInstance()
 {
 	static ConstructorHelpers::FObjectFinder<UAnimMontage>AM(TEXT("AnimMontage'/Game/Animations/TestAnimMontage.TestAnimMontage'"));
@@ -26,18 +27,21 @@ void UTestAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	if (IsValid(Pawn))
 	{
 		
-		auto Character = Cast<ACharacter>(Pawn);
+		auto Character = Cast<ATestCharacter>(Pawn);
 		if (Character)
 		{
 			Speed = Character->GetVelocity().Size();
 			IsFalling = Character->GetMovementComponent()->IsFalling();
+			Horizontal = Character->LeftRightValue;
+			Vertical = Character->UpDownValue;
 		}
 	}
 }
 
 void UTestAnimInstance::AnimNotify_AttackHit()
 {
-	UE_LOG(LogTemp, Log, TEXT("AnimNotify_AttackHit"));
+	//UE_LOG(LogTemp, Log, TEXT("AnimNotify_AttackHit"));
+	OnAttackHit.Broadcast();
 }
 
 FName UTestAnimInstance::GetAttackMontageName(int32 SectionIndex)

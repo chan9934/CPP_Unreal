@@ -17,3 +17,4 @@ D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.g
 D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
 C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\TestAnimInstance.h
 C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Inc\TestUnrealEngine\TestAnimInstance.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h

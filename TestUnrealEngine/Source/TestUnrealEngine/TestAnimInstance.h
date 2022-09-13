@@ -7,8 +7,9 @@
 #include "TestAnimInstance.generated.h"
 
 /**
- * 
+ *
  */
+DECLARE_MULTICAST_DELEGATE(FOnAttackHit);
 UCLASS()
 class TESTUNREALENGINE_API UTestAnimInstance : public UAnimInstance
 {
@@ -30,14 +31,22 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 		UAnimMontage* AnimMontage;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+		float Horizontal;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+		float Vertical;
 
 private:
 	UFUNCTION()
-	void AnimNotify_AttackHit();
+		void AnimNotify_AttackHit();
 
 public:
 	FName GetAttackMontageName(int32 SectionIndex);
 	void JumpToSection(int32 SectionIndex);
 
-	
+public:
+	FOnAttackHit OnAttackHit;
+
+
+
 };

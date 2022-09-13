@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "TestAnimInstance.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 ATestCharacter::ATestCharacter()
@@ -38,8 +39,7 @@ void ATestCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AnimInstance = Cast<UTestAnimInstance>(GetMesh()->GetAnimInstance());
-	AnimInstance->OnMontageEnded.AddDynamic(this, &ATestCharacter::OnAttackMontageEnded);
+	
 	
 }
 
@@ -64,12 +64,24 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 }
 
+void ATestCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	AnimInstance = Cast<UTestAnimInstance>(GetMesh()->GetAnimInstance());
+	if (AnimInstance)
+	{
+		AnimInstance->OnMontageEnded.AddDynamic(this, &ATestCharacter::OnAttackMontageEnded);
+		AnimInstance->OnAttackHit.AddUObject(this, &ATestCharacter::AttackCheck);
+	}
+}
+
 void ATestCharacter::UpDown(float Value)
 {
 	if (Value == 0.f)
 	{
 		return;
 	}
+	UpDownValue = Value;
 	AddMovementInput(GetActorForwardVector(), Value);
 }
 
@@ -79,6 +91,7 @@ void ATestCharacter::LeftRight(float Value)
 	{
 		return;
 	}
+	LeftRightValue = Value;
 	AddMovementInput(GetActorRightVector(), Value);
 }
 
@@ -103,6 +116,50 @@ void ATestCharacter::Attack()
 	
 	IsAttacking = true;
 	
+}
+
+void ATestCharacter::AttackCheck()
+{
+	FHitResult HitResult;
+	FCollisionQueryParams Params(NAME_None, false, this);
+
+	float AttackRange = 100.f;
+	float AttackRadius = 50.f;
+
+	bool bResult = GetWorld()->SweepSingleByChannel(
+		OUT HitResult,
+		GetActorLocation(),
+		GetActorLocation() + GetActorForwardVector() * AttackRange,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel4,
+		FCollisionShape::MakeSphere(AttackRadius),
+		Params
+
+	);
+
+	FVector Vec = GetActorForwardVector() * AttackRange;
+	FVector Center = GetActorLocation() + Vec * 0.5f;
+
+	float HalfHeight = AttackRange * 0.5f + AttackRadius;
+
+	FQuat Rotation = FRotationMatrix::MakeFromZ(Vec).ToQuat();
+	FColor DrawColor;
+	if (bResult)
+	{
+		DrawColor = FColor::Green;
+	}
+	else
+	{
+		DrawColor = FColor::Red;
+	}
+
+	DrawDebugCapsule(GetWorld(), Center, HalfHeight, AttackRadius, Rotation, DrawColor, false, 2.f);
+	if (bResult && HitResult.Actor.IsValid())
+	{
+		UE_LOG(LogTemp, Log, TEXT("Hit Actor : %s"), *HitResult.Actor->GetName());
+	}
+
+
 }
 
 void ATestCharacter::OnAttackMontageEnded(UAnimMontage* AnimMontage, bool bInterrupted)

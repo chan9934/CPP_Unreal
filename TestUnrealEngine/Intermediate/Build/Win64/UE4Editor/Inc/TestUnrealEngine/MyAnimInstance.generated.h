@@ -13,18 +13,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TESTUNREALENGINE_MyAnimInstance_generated_h
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_SPARSE_DATA
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_SPARSE_DATA
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execAnimNotify_AttackHit);
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAnimNotify_AttackHit);
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyAnimInstance(); \
 	friend struct Z_Construct_UClass_UMyAnimInstance_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(UMyAnimInstance)
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_INCLASS \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesUMyAnimInstance(); \
 	friend struct Z_Construct_UClass_UMyAnimInstance_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(UMyAnimInstance)
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_STANDARD_CONSTRUCTORS \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMyAnimInstance(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMyAnimInstance) \
@@ -55,7 +55,7 @@ private: \
 public:
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UMyAnimInstance(UMyAnimInstance&&); \
@@ -66,7 +66,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UMyAnimInstance)
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UMyAnimInstance, Speed); } \
 	FORCEINLINE static uint32 __PPO__IsFalling() { return STRUCT_OFFSET(UMyAnimInstance, IsFalling); } \
 	FORCEINLINE static uint32 __PPO__AttackMontage() { return STRUCT_OFFSET(UMyAnimInstance, AttackMontage); } \
@@ -74,27 +74,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__Vertical() { return STRUCT_OFFSET(UMyAnimInstance, Vertical); }
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_12_PROLOG
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_GENERATED_BODY_LEGACY \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_14_PROLOG
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_SPARSE_DATA \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_INCLASS \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_STANDARD_CONSTRUCTORS \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_PRIVATE_PROPERTY_OFFSET \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_SPARSE_DATA \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_RPC_WRAPPERS \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_INCLASS \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_GENERATED_BODY \
+#define TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_PRIVATE_PROPERTY_OFFSET \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_SPARSE_DATA \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
-	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_PRIVATE_PROPERTY_OFFSET \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_SPARSE_DATA \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_INCLASS_NO_PURE_DECLS \
+	TestUnrealEngine_Source_TestUnrealEngine_MyAnimInstance_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

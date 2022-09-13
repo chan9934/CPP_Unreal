@@ -81,6 +81,14 @@ void EmptyLinkFunctionForGeneratedCodeTestAnimInstance() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimMontage_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimMontage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Horizontal_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Horizontal;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Vertical_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Vertical;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -94,7 +102,6 @@ void EmptyLinkFunctionForGeneratedCodeTestAnimInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTestAnimInstance_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "AnimInstance" },
 		{ "IncludePath", "TestAnimInstance.h" },
 		{ "ModuleRelativePath", "TestAnimInstance.h" },
@@ -128,10 +135,28 @@ void EmptyLinkFunctionForGeneratedCodeTestAnimInstance() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_AnimMontage = { "AnimMontage", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTestAnimInstance, AnimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_AnimMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_AnimMontage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Horizontal_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Pawn" },
+		{ "ModuleRelativePath", "TestAnimInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Horizontal = { "Horizontal", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTestAnimInstance, Horizontal), METADATA_PARAMS(Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Horizontal_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Horizontal_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Vertical_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Pawn" },
+		{ "ModuleRelativePath", "TestAnimInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Vertical = { "Vertical", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UTestAnimInstance, Vertical), METADATA_PARAMS(Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Vertical_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Vertical_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTestAnimInstance_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Speed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_IsFalling,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_AnimMontage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Horizontal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestAnimInstance_Statics::NewProp_Vertical,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UTestAnimInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UTestAnimInstance>::IsAbstract,
@@ -160,7 +185,7 @@ void EmptyLinkFunctionForGeneratedCodeTestAnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTestAnimInstance, 4103780225);
+	IMPLEMENT_CLASS(UTestAnimInstance, 1817269000);
 	template<> TESTUNREALENGINE_API UClass* StaticClass<UTestAnimInstance>()
 	{
 		return UTestAnimInstance::StaticClass();

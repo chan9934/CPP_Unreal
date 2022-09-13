@@ -26,6 +26,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	virtual void PostInitializeComponents() override;
+
 private:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	class USpringArmComponent* SpringArm;
@@ -38,6 +40,7 @@ public:
 	void LeftRight(float Value);
 	void Yaw(float Value);
 	void Attack();
+	void AttackCheck();
 
 	UPROPERTY(VisibleAnywhere, Category = Pawn)
 	bool IsAttacking = false;
@@ -51,5 +54,11 @@ public:
 private:
 	UPROPERTY()
 	int32 AttackIndex = 0;
+
+public:
+	UPROPERTY()
+	float UpDownValue = 0.f;
+	UPROPERTY()
+	float LeftRightValue = 0.f;
 
 };
