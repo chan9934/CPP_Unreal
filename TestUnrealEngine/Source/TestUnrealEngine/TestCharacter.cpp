@@ -7,6 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "TestAnimInstance.h"
 #include "DrawDebugHelpers.h"
+#include "TestWeapon.h"
 
 // Sets default values
 ATestCharacter::ATestCharacter()
@@ -29,7 +30,18 @@ ATestCharacter::ATestCharacter()
 	SpringArm->SetRelativeRotation(FRotator(-35.f, 0.f, 0.f));
 
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.f, 0.f, -88.f), FRotator(0.f, -90.f, 0.f));
-	
+	//FName WeaponSocket(TEXT("hand_l_Socket"));
+	//if (GetMesh()->DoesSocketExist(WeaponSocket))
+	//{
+	//	Weapon = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Weapon"));
+	//	static ConstructorHelpers::FObjectFinder<UStaticMesh>SW(TEXT("StaticMesh'/Game/ParagonGreystone/FX/Meshes/Heroes/Greystone/SM_Greystone_Blade_01.SM_Greystone_Blade_01'"));
+	//	if (SW.Succeeded())
+	//	{
+	//		Weapon->SetStaticMesh(SW.Object);
+	//	}
+	//	Weapon->SetupAttachment(GetMesh(), WeaponSocket);
+	//}
+	//
 
 
 }
@@ -39,6 +51,13 @@ void ATestCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	FName WeaponSocket(TEXT("hand_l_socket"));
+
+	auto CurrentWeapon = GetWorld()->SpawnActor<ATestWeapon>(FVector::ZeroVector, FRotator::ZeroRotator);
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->AttachToComponent(GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale ,WeaponSocket);
+	}
 	
 	
 }

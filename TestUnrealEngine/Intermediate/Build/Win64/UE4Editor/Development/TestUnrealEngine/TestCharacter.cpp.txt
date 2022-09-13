@@ -18,3 +18,5 @@ D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent
 C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\TestAnimInstance.h
 C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Inc\TestUnrealEngine\TestAnimInstance.generated.h
 D:\UE_4.27\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\TestWeapon.h
+C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Inc\TestUnrealEngine\TestWeapon.generated.h

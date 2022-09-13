@@ -1,0 +1,3 @@
+C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Development\TestUnrealEngine\Definitions.TestUnrealEngine.h
+C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\TestWeapon.h
+C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Inc\TestUnrealEngine\TestWeapon.generated.h

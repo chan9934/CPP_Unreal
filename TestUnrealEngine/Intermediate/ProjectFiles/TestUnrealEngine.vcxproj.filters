@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TestUnrealEngine.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5F30B577-677B-4D65-8E41-0D3AD691B5A2}</UniqueIdentifier>
+      <UniqueIdentifier>{02267F3D-9385-461B-A0CB-E9EAF8EB832F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestUnrealEngine.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{28A07BA7-F537-482A-87B7-9D905E249A84}</UniqueIdentifier>
+      <UniqueIdentifier>{BF6720BC-240A-4569-91B3-5073B6A8443B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TestUnrealEngine">
-      <UniqueIdentifier>{3B9822C2-BAE7-4111-AC8E-0E1B3F0B1A65}</UniqueIdentifier>
+      <UniqueIdentifier>{A87552B3-4C1F-432A-A0E3-BDEC754EF67F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TestUnrealEngine\MyAnimInstance.cpp">
       <Filter>Source\TestUnrealEngine</Filter>
@@ -45,6 +45,12 @@
       <Filter>Source\TestUnrealEngine</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TestUnrealEngine\MyGameModeBase.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyWeapon.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyWeapon.h">
       <Filter>Source\TestUnrealEngine</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TestUnrealEngine\TestAnimInstance.cpp">
@@ -78,6 +84,12 @@
       <Filter>Source\TestUnrealEngine</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TestUnrealEngine\TestUnrealEngineGameModeBase.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\TestWeapon.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\TestWeapon.h">
       <Filter>Source\TestUnrealEngine</Filter>
     </ClInclude>
   </ItemGroup>
