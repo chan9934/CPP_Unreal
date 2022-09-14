@@ -10,16 +10,27 @@ UCLASS()
 class TESTUNREALENGINE_API ATestWeapon : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ATestWeapon();
+
+private:
+	UFUNCTION()
+		void OnCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherACtor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void PostInitializeComponents()override;
+
+
+
 	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Weapon;
+		UStaticMeshComponent* Weapon;
+
+	UPROPERTY(VisibleAnywhere)
+		class UBoxComponent* Trigger;
 
 };

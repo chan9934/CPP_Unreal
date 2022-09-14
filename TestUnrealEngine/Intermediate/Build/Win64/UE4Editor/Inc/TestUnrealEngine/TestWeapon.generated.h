@@ -8,14 +8,25 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef TESTUNREALENGINE_TestWeapon_generated_h
 #error "TestWeapon.generated.h already included, missing '#pragma once' in TestWeapon.h"
 #endif
 #define TESTUNREALENGINE_TestWeapon_generated_h
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_SPARSE_DATA
-#define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_RPC_WRAPPERS
-#define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnCharacterOverlap);
+
+
+#define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnCharacterOverlap);
+
+
 #define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATestWeapon(); \
@@ -59,7 +70,8 @@ public: \
 
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Weapon() { return STRUCT_OFFSET(ATestWeapon, Weapon); }
+	FORCEINLINE static uint32 __PPO__Weapon() { return STRUCT_OFFSET(ATestWeapon, Weapon); } \
+	FORCEINLINE static uint32 __PPO__Trigger() { return STRUCT_OFFSET(ATestWeapon, Trigger); }
 
 
 #define TestUnrealEngine_Source_TestUnrealEngine_TestWeapon_h_9_PROLOG

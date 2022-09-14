@@ -1,3 +1,15 @@
 C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Development\TestUnrealEngine\Definitions.TestUnrealEngine.h
 C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\TestWeapon.h
 C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Inc\TestUnrealEngine\TestWeapon.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+C:\UnrealC\TestUnrealEngine\Source\TestUnrealEngine\TestCharacter.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\UnrealC\TestUnrealEngine\Intermediate\Build\Win64\UE4Editor\Inc\TestUnrealEngine\TestCharacter.generated.h
