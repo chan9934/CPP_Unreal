@@ -51,7 +51,7 @@ void AMyWeapon::OnCharacterOverlap(UPrimitiveComponent* OverlappedComp, AActor* 
 	UE_LOG(LogTemp, Log, TEXT("OVerlapped"));
 
 	AMyCharacter* MyCharacter = Cast<AMyCharacter>(OtherActor);
-	if (MyCharacter)`
+	if (MyCharacter)
 	{
 		FName WeaponSocket(TEXT("hand_l_Socket"));
 		AttachToComponent(MyCharacter->GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocket);
