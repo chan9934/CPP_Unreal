@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TestUnrealEngine.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{162BEFCD-F5D4-4F0D-8DE1-293D171B541E}</UniqueIdentifier>
+      <UniqueIdentifier>{B321433B-9157-4A45-A36A-03FC9B60FFED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestUnrealEngine.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{95C864D9-1E7A-4DF1-9FDB-5847C4148F21}</UniqueIdentifier>
+      <UniqueIdentifier>{956361F6-ED58-48BE-AA58-3D37BF77A4F6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,8 +27,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TestUnrealEngine">
-      <UniqueIdentifier>{977D5D16-7DD6-4CE7-89BC-917F5C9EBDC8}</UniqueIdentifier>
+      <UniqueIdentifier>{F1916152-3A67-4B7E-91BA-95744C7AC388}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyAIController.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyAIController.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TestUnrealEngine\MyAnimInstance.cpp">
       <Filter>Source\TestUnrealEngine</Filter>
     </ClCompile>
@@ -39,6 +45,12 @@
       <Filter>Source\TestUnrealEngine</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TestUnrealEngine\MyCharacter.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyCharacterWidget.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyCharacterWidget.h">
       <Filter>Source\TestUnrealEngine</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TestUnrealEngine\MyClass.cpp">
@@ -57,6 +69,12 @@
       <Filter>Source\TestUnrealEngine</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TestUnrealEngine\MyGameModeBase.h">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestUnrealEngine\MyStatComponent.cpp">
+      <Filter>Source\TestUnrealEngine</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestUnrealEngine\MyStatComponent.h">
       <Filter>Source\TestUnrealEngine</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TestUnrealEngine\MyWeapon.cpp">
